@@ -1,0 +1,25 @@
+query SearchFirstTen($queryString: String!) {
+    search(query: $queryString, type: REPOSITORY, first: 10) {
+        repositoryCount
+        edges {
+            nodes {
+            ... on Repository {
+                    name
+                    descriptionHTML
+                    stargazers {
+                        totalCount
+                    }
+                    forks {
+                        totalCount
+                    }
+                    updatedAt
+                }
+            }
+            cursor
+        }
+        pageInfo {
+            endCursor
+            hasNextPage
+        }
+    }
+}

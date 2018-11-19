@@ -1,0 +1,6 @@
+framework module Pods_GitRepoFinder {
+  umbrella header "Pods-GitRepoFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
